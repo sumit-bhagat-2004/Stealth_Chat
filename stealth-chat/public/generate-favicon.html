@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Flipkart Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="display: none;"></canvas>
+    <img id="favicon" style="width: 32px; height: 32px; border: 1px solid #ccc;">
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Fill background with Flipkart blue
+        ctx.fillStyle = '#2874F0';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Add white 'F' text
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = 'bold 20px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('F', 16, 16);
+        
+        // Convert to data URL and set as favicon
+        const dataURL = canvas.toDataURL('image/png');
+        document.getElementById('favicon').src = dataURL;
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = dataURL;
+        link.textContent = 'Download Favicon';
+        document.body.appendChild(link);
+        
+        console.log('Favicon generated:', dataURL);
+    </script>
+</body>
+</html>

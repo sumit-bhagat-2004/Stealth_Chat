@@ -1,0 +1,26 @@
+{
+  "name": "Flipkart - Online Shopping App",
+  "short_name": "Flipkart",
+  "description": "India's leading e-commerce marketplace with over 80 million products across hundreds of categories",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2874F0",
+  "theme_color": "#2874F0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["shopping", "business", "lifestyle"],
+  "lang": "en-IN",
+  "dir": "ltr"
+}
